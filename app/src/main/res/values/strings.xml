@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">路线模拟</string>
+    <string name="app_name">校园跑工具</string>
 
     <string name="help_button">帮助</string>
     <string name="locate_button">定位到当前位置</string>
