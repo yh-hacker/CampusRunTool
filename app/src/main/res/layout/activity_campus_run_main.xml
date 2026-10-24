@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cr_bg_gradient"
+    android:fitsSystemWindows="false">
+
+    <com.campsruntool.yh.campusrun.CampusRunGlassBackgroundView
+        android:id="@+id/cr_glass_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="48dp"
+            android:paddingBottom="32dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <TextView
+                android:id="@+id/cr_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="← 返回"
+                android:textColor="#CCFFFFFF"
+                android:textSize="15sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/cr_bg_ghost_button"
+                android:onClick="goBack" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="校园跑打卡工具"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="NFC 模拟 · 一碰即达"
+                android:textColor="#99FFFFFF"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/cr_chip_status"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="NFC: 检测中..."
+                android:textColor="#99FFFFFF"
+                android:textSize="12sp"
+                android:background="@drawable/cr_bg_chip_info" />
+
+            <FrameLayout
+                android:id="@+id/cr_card_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/cr_bg_glass_card_highlight"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NFC 标签链接"
+                        android:textColor="#B3FFFFFF"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08" />
+
+                    <EditText
+                        android:id="@+id/cr_et_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="请碰一下打卡墙读取信息"
+                        android:textColorHint="#66FFFFFF"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:background="@android:color/transparent"
+                        android:inputType="textUri"
+                        android:singleLine="false"
+                        android:maxLines="4"
+                        android:padding="0dp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/cr_btn_dispatch"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/cr_bg_button_primary"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚡"
+                        android:textSize="22sp"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="开始签到"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/cr_tv_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="提示：将手机靠近打卡墙读取 NFC 标签，链接会自动填充到上方输入框，然后点击「开始签到」即可。"
+                android:textColor="#66FFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="4dp"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

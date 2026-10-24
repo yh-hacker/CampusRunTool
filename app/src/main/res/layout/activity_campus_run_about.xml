@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cr_bg_gradient"
+    android:fitsSystemWindows="false">
+
+    <com.campsruntool.yh.campusrun.CampusRunGlassBackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="48dp"
+            android:paddingBottom="32dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <TextView
+                android:id="@+id/cr_about_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="← 返回"
+                android:textColor="#CCFFFFFF"
+                android:textSize="15sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/cr_bg_ghost_button"
+                android:onClick="goBack" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center_horizontal"
+                android:text="关于"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/cr_bg_glass_card_highlight"
+                android:padding="28dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="校园跑打卡工具"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="v1.1 · Liquid Glass"
+                        android:textColor="#99FFFFFF"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="#20FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="作者"
+                        android:textColor="#80FFFFFF"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="YH-Hacker"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="#20FFFFFF" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="本工具通过 NFC 模拟技术，将打卡墙的 NDEF 标签信息转发至支付宝，实现快速签到。\n\n仅供学习交流使用，请勿用于非法用途。"
+                        android:textColor="#B3FFFFFF"
+                        android:textSize="13sp"
+                        android:lineSpacingExtra="6dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_gravity="center_horizontal"
+                android:text="© 2026 YH-Hacker. All rights reserved."
+                android:textColor="#4DFFFFFF"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
